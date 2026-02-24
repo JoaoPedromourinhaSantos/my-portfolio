@@ -45,10 +45,10 @@ Para melhor visualização, as telas principais estão organizadas lado a lado.
 
 | Tela | Captura de Tela |
 | :---: | :---: |
-| **Página Inicial (Home)** | <img src="https://github.com/user-attachments/assets/b53f56e0-78fb-4442-b724-c349c83b95b3" alt="home" width="120px" height="120px"> |
-| **About** | <img src="https://github.com/user-attachments/assets/b573ef44-2620-4957-9db6-ff32b3e75fc5" alt="About" width="120px" height="120px"> |
-| **Projects** | <img src="https://github.com/user-attachments/assets/06ecdbe6-90fb-460f-8fc1-a1190d5357b7" alt="Projects" width="120px" height="120px"> |
-| **Contact** | <img src="https://github.com/user-attachments/assets/a60055c0-39b0-4523-a329-6a56461ea76b" alt="Contact" width="120px" height="120px"> |
+| **Página Inicial (Home)** | <img src="https://github.com/user-attachments/assets/b53f56e0-78fb-4442-b724-c349c83b95b3" alt="home" width="440px" height="224px"> |
+| **About** | <img src="https://github.com/user-attachments/assets/b573ef44-2620-4957-9db6-ff32b3e75fc5" alt="About" width="440px" height="224px"> |
+| **Projects** | <img src="https://github.com/user-attachments/assets/06ecdbe6-90fb-460f-8fc1-a1190d5357b7" alt="Projects" width="440px" height="224px"> |
+| **Contact** | <img src="https://github.com/user-attachments/assets/a60055c0-39b0-4523-a329-6a56461ea76b" alt="Contact" width="440px" height="224px"> |
 ---
 
 ### 🌐 Aplicação Web
