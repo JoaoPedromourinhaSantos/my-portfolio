@@ -601,6 +601,10 @@ function initLanguage() {
         { pt: "Feedbacks", en: "Feedbacks" },
         { pt: "Certificações", en: "Certifications" },
         { pt: "Contato", en: "Contact" },
+        { pt: "Seu nome", en: "Your name" },
+        { pt: "Sua mensagem", en: "Your message" },
+        { pt: "Deixe seu feedback", en: "Leave your feedback" },
+        { pt: "Enviar", en: "Submit" },
         { pt: "Idioma", en: "Language" },
         { pt: " Desenvolvedor Full-Stack", en: " Full-Stack Developer" },
         { pt: "Desenvolvedor Full-Stack", en: "Full-Stack Developer" },
@@ -689,7 +693,7 @@ function initLanguage() {
     let currentLang = localStorage.getItem('lang') || 'en';
 
     function translatePage(lang) {
-        const elements = document.querySelectorAll('span, p, h1, h2, h3, h4, a, label, div');
+        const elements = document.querySelectorAll('span, p, h1, h2, h3, h4, a, label, div, button');
         
         elements.forEach(el => {
             if (el.childNodes.length > 0) {
@@ -704,6 +708,16 @@ function initLanguage() {
                         }
                     }
                 });
+            }
+        });
+        
+        // translate input/textarea placeholders
+        const formElems = document.querySelectorAll('input[placeholder], textarea[placeholder]');
+        formElems.forEach(el => {
+            const text = el.getAttribute('placeholder').trim();
+            const match = translations.find(t => t.pt === text || t.en === text);
+            if (match) {
+                el.setAttribute('placeholder', match[lang]);
             }
         });
         
@@ -729,6 +743,59 @@ function initLanguage() {
             }
         });
     }
+}
+
+function initFeedback() {
+    const form = document.getElementById('feedbackForm');
+    const listEl = document.getElementById('feedbackList');
+    const storageKey = 'portfolioFeedbacks';
+
+    function escapeHtml(str) {
+        return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m]));
+    }
+
+    function loadFeedbacks() {
+        try {
+            return JSON.parse(localStorage.getItem(storageKey) || '[]');
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function saveFeedbacks(arr) {
+        localStorage.setItem(storageKey, JSON.stringify(arr));
+    }
+
+    function render() {
+        if (!listEl) return;
+        const items = loadFeedbacks();
+        listEl.innerHTML = items.map(f => `
+            <div class="feedback-item">
+                <div class="feedback-name">${escapeHtml(f.name)}</div>
+                <div class="feedback-date">${escapeHtml(f.date)}</div>
+                <div class="feedback-text">${escapeHtml(f.message)}</div>
+            </div>
+        `).join('');
+    }
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameInput = document.getElementById('feedbackName');
+            const msgInput = document.getElementById('feedbackMessage');
+            const name = nameInput.value.trim();
+            const message = msgInput.value.trim();
+            if (!name || !message) return;
+            const arr = loadFeedbacks();
+            const now = new Date();
+            arr.unshift({ name, message, date: now.toLocaleString() });
+            saveFeedbacks(arr);
+            render();
+            form.reset();
+        });
+    }
+
+    render();
 }
 
 function initHacksSlider() {
@@ -915,6 +982,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParallax();
     initScrollEffects();
     initLanguage(); 
+    initFeedback();
     initHacksSlider();
 });
 

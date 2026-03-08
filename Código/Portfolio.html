@@ -543,83 +543,28 @@
                         <span class="title-underline"></span>
                     </h2>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card">
+                <div class="feedback-container">
+                    <div class="service-card feedback-card">
                         <div class="service-header">
                             <div class="service-icon">
-                                <i class="fas fa-bug"></i>
+                                <i class="fas fa-comment-alt"></i>
                                 <div class="icon-glow"></div>
                             </div>
-                            <div class="service-number">01</div>
                         </div>
-                        <h3 class="service-title">Penetration Testing</h3>
-                        <p class="service-description">
-                            Identify vulnerabilities before attackers exploit them through comprehensive security
-                            testing.
-                        </p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Web Application Testing</li>
-                            <li><i class="fas fa-check"></i> Network Penetration</li>
-                            <li><i class="fas fa-check"></i> Social Engineering</li>
-                            <li><i class="fas fa-check"></i> Physical Security</li>
-                        </ul>
-                        <div class="service-footer">
-                            <a href="#contact" class="service-link">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-shield-virus"></i>
-                                <div class="icon-glow"></div>
+                        <h3 class="service-title feedback-heading">Deixe seu feedback</h3>
+                        <form id="feedbackForm" class="feedback-form">
+                            <div class="form-group">
+                                <label for="feedbackName">Nome</label>
+                                <input type="text" id="feedbackName" required placeholder="Seu nome">
                             </div>
-                            <div class="service-number">02</div>
-                        </div>
-                        <h3 class="service-title">Vulnerability Assessment</h3>
-                        <p class="service-description">
-                            Systematic evaluation of security weaknesses with comprehensive risk analysis.
-                        </p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Automated Scanning</li>
-                            <li><i class="fas fa-check"></i> Manual Testing</li>
-                            <li><i class="fas fa-check"></i> Risk Analysis</li>
-                            <li><i class="fas fa-check"></i> Remediation Plans</li>
-                        </ul>
-                        <div class="service-footer">
-                            <a href="#contact" class="service-link">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-header">
-                            <div class="service-icon">
-                                <i class="fas fa-user-shield"></i>
-                                <div class="icon-glow"></div>
+                            <div class="form-group">
+                                <label for="feedbackMessage">Mensagem</label>
+                                <textarea id="feedbackMessage" required placeholder="Sua mensagem"></textarea>
                             </div>
-                            <div class="service-number">03</div>
-                        </div>
-                        <h3 class="service-title">Security Consulting</h3>
-                        <p class="service-description">
-                            Strategic security guidance to build robust defense mechanisms and custom architecture.
-                        </p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-check"></i> Security Architecture</li>
-                            <li><i class="fas fa-check"></i> Policy Development</li>
-                            <li><i class="fas fa-check"></i> Compliance Audits</li>
-                            <li><i class="fas fa-check"></i> Training Programs</li>
-                        </ul>
-                        <div class="service-footer">
-                            <a href="#contact" class="service-link">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
                     </div>
+                    <div id="feedbackList" class="feedback-list"></div>
                 </div>
             </div>
         </section>
