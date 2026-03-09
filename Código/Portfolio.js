@@ -905,6 +905,62 @@ function initHacksSlider() {
     startAutoSlide();
 }
 
+function initProjectModal() {
+    const modal = document.getElementById('projectModal');
+    if (!modal) return;
+
+    const closeModalBtn = document.getElementById('closeModal');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    const modalTitle = document.getElementById('modalTitle');
+    const modalImage = document.getElementById('modalImage');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalTechList = document.getElementById('modalTechList');
+
+    projectCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const title = card.getAttribute('data-title');
+            const desc = card.getAttribute('data-description');
+            const techs = card.getAttribute('data-tech').split(',');
+            const imgSrc = card.getAttribute('data-gif');
+
+            modalTitle.textContent = title;
+            modalDescription.textContent = desc;
+            modalImage.src = imgSrc;
+
+            modalTechList.innerHTML = '';
+            techs.forEach(tech => {
+                const span = document.createElement('span');
+                span.className = 'tech-tag';
+                span.textContent = tech.trim();
+                modalTechList.appendChild(span);
+            });
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    closeModalBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initLoader();
     initMatrix();
@@ -916,6 +972,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollEffects();
     initLanguage(); 
     initHacksSlider();
+    initProjectModal();
 });
 
 function initEmailJS() {
