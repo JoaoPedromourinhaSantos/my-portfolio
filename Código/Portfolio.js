@@ -611,16 +611,16 @@ function initLanguage() {
         { pt: "Idioma", en: "Language" },
         { pt: " Desenvolvedor Full-Stack", en: " Full-Stack Developer" },
         { pt: "Desenvolvedor Full-Stack", en: "Full-Stack Developer" },
-        { pt: "CRIANDO", en: "BUILDING" },
-        { pt: "EXPERIÊNCIAS", en: "DIGITAL" },
-        { pt: "DIGITAIS", en: "EXPERIENCES" },
+        { pt: "BEM VINDO", en: "WELCOME" },
+        { pt: "AO MEU", en: "TO MY" },
+        { pt: "PORTIFÓLIO", en: "PORTFOLIO" },
         { pt: "Desenvolvimento Full-Stack", en: "Full-Stack Development" },
         { pt: "Design de API", en: "API Design" },
         { pt: "Arquitetura de Software", en: "Software Architecture" },
-        { pt: "Engenheiro de Software focado na construção de arquiteturas robustas e aplicações web de alto desempenho, desde a infraestrutura de backend até interfaces dinâmicas e responsivas.", en: "Software Engineer focused on building robust architectures and high-performance web applications, from backend infrastructure to dynamic and responsive interfaces." },
-        { pt: "Sistemas Protegidos", en: "Systems Secured" },
+        { pt: "Sou acadêmico de Engenharia de Software com sólida base em desenvolvimento full-stack, especializado em Java (Spring Boot), Python, React e Swift. Na MRV&CO, foco em automação (RPA) e integração de sistemas como o SAP S/4HANA. Além do código, sou entusiasta da cultura JDM, apaixonado por carros e dedicado ao desenvolvimento pessoal através da leitura e da oratória.", en: "I am a Software Engineering student with a strong full-stack background, specializing in Java (Spring Boot), Python, React, and Swift. At MRV&CO, I focus on automation (RPA) and systems integration like SAP S/4HANA. Beyond coding, I am a JDM culture enthusiast, car lover, and dedicated to personal growth through reading and public speaking." },
+        { pt: "Projetos", en: "Projects" },
         { pt: "Anos de Experiência", en: "Years Experience" },
-        { pt: "Clientes Protegidos", en: "Clients Protected" },
+        { pt: "Recomendações", en: "Recommendations" },
         { pt: "Entre em contato", en: "Contact Me" },
         { pt: "Ver Serviços", en: "View Services" },
         { pt: "Teste de Intrusão", en: "Network Penetration" },
@@ -1090,9 +1090,9 @@ async function enviarEmail({ nome, email, mensagem }) {
 }
 
 const EMAILJS_CONFIG = {
-  serviceID: "service_y9s2jn5",
-  templateID: "template_2dyxo09",
-  publicKey: "KH4L1BXtO99hWbZjI",
+  serviceID: "service_l23vpl6",
+  templateID: "template_csy41dh",
+  publicKey: "zdpBnZG_sKiw_msOv",
 };
 
 

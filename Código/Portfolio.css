@@ -3731,3 +3731,20 @@ body {
     color: var(--bg-dark);
     transform: translateY(-2px);
 }
+
+.tech-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+    .badge {
+        background: rgba(0, 255, 157, 0.1);
+        color: #00ff9d;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        border: 1px solid rgba(0, 255, 157, 0.3);
+        text-transform: uppercase;
+        font-weight: 600;
+    }
