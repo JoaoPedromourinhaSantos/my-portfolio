@@ -600,7 +600,7 @@ function initLanguage() {
     const translations = [
         { pt: "Início", en: "Home" },
         { pt: "Projetos", en: "Projects" },
-        { pt: "Sobre", en: "About" },
+        { pt: "Sobre Mim", en: "About Me" },
         { pt: "Feedbacks", en: "Feedbacks" },
         { pt: "Certificações", en: "Certifications" },
         { pt: "Contato", en: "Contact" },
@@ -692,7 +692,31 @@ function initLanguage() {
         { pt: "MONITORANDO", en: "MONITORING" },
         { pt: "Nível de Criptografia", en: "Encryption Level" },
         { pt: "Ver Serviços", en: "View Services" },
-        { pt: "Baixar Currículo", en: "Download Resume" }
+        { pt: "Baixar Currículo", en: "Download Resume" },
+        { pt: "Busca personalizada de restaurantes com filtros inteligentes de culinária e preço.", en: "Personalized restaurant search with smart filters for cuisine and price." },
+        { pt: "Calculadora de impacto ambiental em rotas brasileiras, desenvolvida com IA aplicada.", en: "Environmental impact calculator for Brazilian routes, developed with applied AI." },
+        { pt: "Fundamentos de lógica de programação e estruturação de dados complexos em JSON.", en: "Fundamentals of programming logic and complex data structuring in JSON." },
+
+
+        { pt: "Estudante de Engenharia de Software", en: "Software Engineering Student" },
+        { pt: "Desenvolvedor apaixonado por transformar ideias em soluções digitais eficientes. Com base técnica sólida em Programação de Jogos Digitais e atualmente cursando Engenharia de Software na PUC Minas, foco na criação de sistemas escaláveis e interfaces intuitivas. Atualmente, dedico-me ao desenvolvimento do projeto TI4 em Belo Horizonte, unindo tecnologia e preservação histórica.", en: "Passionate developer transforming ideas into efficient digital solutions. With a solid technical background in Digital Game Programming and currently pursuing Software Engineering at PUC Minas, I focus on creating scalable systems and intuitive interfaces. I am currently dedicated to the development of the TI4 project in Belo Horizonte, uniting technology and historical preservation." },
+        { pt: "Desenvolvimento Full Stack", en: "Full Stack Development" },
+        { pt: "Experiência com ecossistema React, Spring Boot (Java) e Python para aplicações robustas.", en: "Experience with React, Spring Boot (Java), and Python ecosystems for robust applications." },
+
+
+
+        { pt: "Mobile & Desktop", en: "Mobile & Desktop" },
+        { pt: "Desenvolvimento multiplataforma explorando tecnologias como Swift e C para alta performance.", en: "Cross-platform development exploring technologies like Swift and C for high performance." },
+        { pt: "Backend & Data", en: "Backend & Data" },
+        { pt: "Modelagem de dados com SQL e implementação de lógicas de negócio complexas.", en: "Data modeling with SQL and implementation of complex business logic." },
+
+        { pt: "Aprendizado Contínuo", en: "Continuous Learning" },
+        { pt: "Focado em arquitetura de software e expansão internacional através de programas de intercâmbio.", en: "Focused on software architecture and international expansion through exchange programs." },
+        { pt: "CONSOLE DO DESENVOLVEDOR", en: "DEVELOPER CONSOLE" },
+        { pt: "Feedbacks", en: "Feedbacks" },
+        { pt: "© 2026 João Pedro Moura Santos. Todos os direitos reservados.", en: "© 2026 João Pedro Moura Santos. All rights reserved." },
+        { pt: "Certificações", en: "Certifications" },
+
 
     ];
 
