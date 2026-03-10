@@ -12,14 +12,14 @@ import {
 
 // 2. Suas credenciais REAIS do seu projeto novo
 const firebaseConfig = {
-  apiKey: "AIzaSyDgbkb-76n0bRw-QJ6QNAD6wyiukfCJizc",
-  authDomain: "my-portfolio-60ae4.firebaseapp.com",
-  projectId: "my-portfolio-60ae4",
-  storageBucket: "my-portfolio-60ae4.firebasestorage.app",
-  messagingSenderId: "945446846598",
-  appId: "1:945446846598:web:8a3e42b5a8a1b18dc4d107",
-  measurementId: "G-582Q7TG6C4"
+  apiKey: "AIzaSyAem7g53cZo_JAOs9KX5Ld8xb4IoyERW2k",
+  authDomain: "moura-portfolio-4ba4f.firebaseapp.com",
+  projectId: "moura-portfolio-4ba4f",
+  storageBucket: "moura-portfolio-4ba4f.firebasestorage.app",
+  messagingSenderId: "692698953323",
+  appId: "1:692698953323:web:fd520b4c8cb38fe49de32e"
 };
+
 
 // 3. Inicialização
 const app = initializeApp(firebaseConfig);
