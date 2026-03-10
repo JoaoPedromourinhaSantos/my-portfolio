@@ -3492,7 +3492,7 @@ body {
 }
 
 .feedback-item {
-    background: linear-gradient(135deg, rgba(0,255,136,0.03) 0%, rgba(0,212,255,0.03) 100%);
+    background: linear-gradient(135deg, rgba(11, 207, 18, 0.03) 0%, rgba(0, 255, 17, 0.03) 100%);
     border: 2px solid var(--border);
     border-radius: 20px;
     padding: 1.5rem;
@@ -3549,7 +3549,7 @@ body {
 
 .feedback-item .feedback-date {
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color:#1d903a;
 }
 
 .feedback-item .feedback-text {
