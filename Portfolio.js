@@ -700,7 +700,7 @@ function initLanguage() {
 
         { pt: "Estudante de Engenharia de Software", en: "Software Engineering Student" },
         { pt: "Desenvolvedor apaixonado por transformar ideias em soluções digitais eficientes. Com base técnica sólida em Programação de Jogos Digitais e atualmente cursando Engenharia de Software na PUC Minas, foco na criação de sistemas escaláveis e interfaces intuitivas. Atualmente, dedico-me ao desenvolvimento do projeto TI4 em Belo Horizonte, unindo tecnologia e preservação histórica.", en: "Passionate developer transforming ideas into efficient digital solutions. With a solid technical background in Digital Game Programming and currently pursuing Software Engineering at PUC Minas, I focus on creating scalable systems and intuitive interfaces. I am currently dedicated to the development of the TI4 project in Belo Horizonte, uniting technology and historical preservation." },
-        { pt: "Desenvolvimento Full Stack", en: "Full Stack Development" },
+        { pt: "Dev Full Stack", en: "Full Stack" },
         { pt: "Experiência com ecossistema React, Spring Boot (Java) e Python para aplicações robustas.", en: "Experience with React, Spring Boot (Java), and Python ecosystems for robust applications." },
 
 
