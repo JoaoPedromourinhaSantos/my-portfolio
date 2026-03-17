@@ -1130,31 +1130,43 @@ if (contactForm) {
     
     const btn = contactForm.querySelector("button[type=submit]");
     const span = btn.querySelector("span"); 
-    
+    const originalText = span.textContent;
+
     btn.disabled = true;
     span.textContent = "Enviando...";
 
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const assunto = document.getElementById("assunto").value;
+            const mensagem = document.getElementById("mensagem").value;
+
     try {
-      await emailjs.send(
-        EMAILJS_CONFIG.serviceID, 
-        EMAILJS_CONFIG.templateID, 
-        {
-          from_name: document.getElementById("nome").value,
-          from_email: document.getElementById("email").value,
-          subject: document.getElementById("assunto").value,
-          message: document.getElementById("mensagem").value,
-        }
-      );
-      
-      alert("Mensagem enviada com sucesso!");
-      contactForm.reset();
+      const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ nome, email, assunto, mensagem })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert("Mensagem enviada com sucesso!");
+                    contactForm.reset();
+                } else {
+                    console.error("Erro detalhado do servidor:", result.error);
+                    alert("Erro ao enviar mensagem: " + (result.error || "Tente novamente."));
+                }
     } catch (err) {
-      console.error("Erro detalhado do EmailJS:", err); 
-      alert("Erro ao enviar. Tente novamente.");
+   console.error("Erro na requisição:", err);
+                alert("Ocorreu um erro ao enviar a mensagem. Verifique sua conexão.");
+            } finally {
+                btn.disabled = false;
+                span.textContent = originalText;
     }
 
-    btn.disabled = false;
-    span.textContent = "Send Secure Message";
   });
 }
 
